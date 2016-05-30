@@ -1,0 +1,78 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-sandbox.capitalone.com/rewards/accounts/+jaR3Du6APE+x4kQue7NB1Z6IEL1OWtPNoA4jkumi8xA%2FRv0eY0VcPYd2Kzm5jNPNcfriz1XC0LlPgonb7VWsw==
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      - v=1
+      User-Agent:
+      - Ruby
+      Host:
+      - api-sandbox.capitalone.com
+      Authorization:
+      - Bearer 8a583e4307bad1513b248273a9183bdd0ce90c06
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Accept:
+      - application/json, v=1
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 May 2016 20:20:06 GMT
+      Expires:
+      - '0'
+      Server:
+      - Jetty(7.6.10.v20130312)
+      Set-Cookie:
+      - BlueStripe.PVN=48774b0c00047bea;Path=/
+      - JSESSIONID=EB3C496C131082E4118965E711F6CF2D;Path=/ext-rewards-accounts-web/;Secure;HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Version-Served:
+      - '1'
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"accountDisplayName":"Capital One Visa Platinum Miles *4458","rewardsBalance":100930.00,"rewardsCurrency":"Miles","balanceTimestamp":"2016-05-02T18:26:53-04:00","canRedeem":true,"canTransferOut":true,"canTransferIn":true,"redemptionOpportunities":[{"category":"Travel","categoryDescription":"Travel","subCategory":"Travel.Erase","subcategoryDescription":"Travel
+        Reimbursement","displaySequenceNumber":1.1,"tierMinCashValue":0.01,"tierMaxCashValue":150.0,"minRedemptionAmount":15000.0,"redemptionAmount":15000.0,"cashValue":150.00,"cashDisplayValue":"$150.00"},{"category":"Travel","categoryDescription":"Travel","subCategory":"Travel.Erase","subcategoryDescription":"Travel
+        Reimbursement","displaySequenceNumber":1.11,"tierMinCashValue":150.01,"tierMaxCashValue":350.0,"minRedemptionAmount":35000.0,"redemptionAmount":35000.0,"cashValue":350.00,"cashDisplayValue":"$350.00"},{"category":"Travel","categoryDescription":"Travel","subCategory":"Travel.Erase","subcategoryDescription":"Travel
+        Reimbursement","displaySequenceNumber":1.12,"tierMinCashValue":350.01,"tierMaxCashValue":600.0,"minRedemptionAmount":60000.0,"redemptionAmount":60000.0,"cashValue":600.00,"cashDisplayValue":"$600.00"},{"category":"Travel","categoryDescription":"Travel","subCategory":"Travel.Erase","subcategoryDescription":"Travel
+        Reimbursement","displaySequenceNumber":1.13,"tierMinCashValue":600.01,"minRedemptionAmount":60001,"redemptionAmount":100930.00,"redemptionRate":0.01,"cashValue":1009.30,"cashDisplayValue":"$1,009.30"},{"category":"Travel","categoryDescription":"Travel","subCategory":"Travel.Booking","subcategoryDescription":"New
+        Travel Purchases","displaySequenceNumber":1.2,"tierMinCashValue":0.01,"tierMaxCashValue":150.0,"minRedemptionAmount":15000.0,"redemptionAmount":15000.0,"cashValue":150.00,"cashDisplayValue":"$150.00"},{"category":"Travel","categoryDescription":"Travel","subCategory":"Travel.Booking","subcategoryDescription":"New
+        Travel Purchases","displaySequenceNumber":1.21,"tierMinCashValue":150.01,"tierMaxCashValue":350.0,"minRedemptionAmount":35000.0,"redemptionAmount":35000.0,"cashValue":350.00,"cashDisplayValue":"$350.00"},{"category":"Travel","categoryDescription":"Travel","subCategory":"Travel.Booking","subcategoryDescription":"New
+        Travel Purchases","displaySequenceNumber":1.22,"tierMinCashValue":350.01,"tierMaxCashValue":600.0,"minRedemptionAmount":60000.0,"redemptionAmount":60000.0,"cashValue":600.00,"cashDisplayValue":"$600.00"},{"category":"Travel","categoryDescription":"Travel","subCategory":"Travel.Booking","subcategoryDescription":"New
+        Travel Purchases","displaySequenceNumber":1.23,"tierMinCashValue":600.01,"minRedemptionAmount":60001,"redemptionAmount":100930.00,"redemptionRate":0.01,"cashValue":1009.30,"cashDisplayValue":"$1,009.30"},{"category":"Cash","categoryDescription":"Cash
+        and Credit","subCategory":"Cash.Check","subcategoryDescription":"Check","displaySequenceNumber":2.1,"minRedemptionAmount":5000.0,"redemptionAmount":100930.00,"redemptionRate":0.0050,"cashValue":504.65,"cashDisplayValue":"$504.65"},{"category":"Cash","categoryDescription":"Cash
+        and Credit","subCategory":"Cash.Credit","subcategoryDescription":"Account
+        Credit","displaySequenceNumber":2.2,"minRedemptionAmount":5000.0,"redemptionAmount":100930.00,"redemptionRate":0.0050,"cashValue":504.65,"cashDisplayValue":"$504.65"},{"category":"Cash","categoryDescription":"Cash
+        and Credit","subCategory":"Cash.Purchase","subcategoryDescription":"New Non-Travel
+        Purchases","displaySequenceNumber":2.3,"minRedemptionAmount":5000.0,"redemptionAmount":100930.00,"redemptionRate":0.0050,"cashValue":504.65,"cashDisplayValue":"$504.65"},{"category":"GiftCard","categoryDescription":"Gift
+        Cards","subCategory":"GiftCard.Mail","subcategoryDescription":"Gift Cards","displaySequenceNumber":3.1,"tierMinCashValue":0.01,"tierMaxCashValue":49.99,"minRedemptionAmount":2,"redemptionAmount":100930.00,"redemptionRate":0.0050,"cashValue":504.65,"cashDisplayValue":"$504.65"},{"category":"GiftCard","categoryDescription":"Gift
+        Cards","subCategory":"GiftCard.Mail","subcategoryDescription":"Gift Cards","displaySequenceNumber":3.11,"tierMinCashValue":50.0,"tierMaxCashValue":199.99,"minRedemptionAmount":7692,"redemptionAmount":100930.00,"redemptionRate":0.0065,"cashValue":656.04,"cashDisplayValue":"$656.04"},{"category":"GiftCard","categoryDescription":"Gift
+        Cards","subCategory":"GiftCard.Mail","subcategoryDescription":"Gift Cards","displaySequenceNumber":3.12,"tierMinCashValue":200.0,"minRedemptionAmount":20000,"redemptionAmount":100930.00,"redemptionRate":0.01,"cashValue":1009.30,"cashDisplayValue":"$1,009.30"},{"category":"Charity","categoryDescription":"Charitable
+        Donation","subCategory":"Charity.Donate","subcategoryDescription":"Donation","displaySequenceNumber":4.1,"minRedemptionAmount":1000.0,"redemptionAmount":100930.00,"redemptionRate":0.01,"cashValue":1009.30,"cashDisplayValue":"$1,009.30"}],"productAccountType":"Credit
+        Card","creditCardAccount":{"issuer":"Capital One","product":"Visa Platinum","lastFour":"4458","network":"Visa","isBusinessAccount":false},"primaryAccountHolder":{"firstName":"YING","lastName":"NICOLA"}}'
+    http_version: 
+  recorded_at: Fri, 27 May 2016 20:20:14 GMT
+recorded_with: VCR 2.9.3

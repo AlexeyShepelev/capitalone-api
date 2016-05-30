@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api-sandbox.capitalone.com/oauth/oauth20/token
+    body:
+      encoding: US-ASCII
+      string: grant_type=refresh_token&refresh_token=X5B-T1hh1xXk5DSfMr_1Q6F-psSsF0l5pMUOmF09IDo&client_id=enterpriseapi-sb-Vh795odTJsJVpBF0qLmB4Ulc&client_secret=48e491c72bc699e25f65f2aeb0024b540b135e2e
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - api-sandbox.capitalone.com
+      Content-Type:
+      - application/x-www-form-urlencoded
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Cache-Control:
+      - no-store
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 May 2016 20:12:57 GMT
+      Server:
+      - Jetty(7.6.10.v20130312)
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: |-
+        {
+          "access_token" : "8a583e4307bad1513b248273a9183bdd0ce90c06",
+          "token_type" : "Bearer",
+          "expires_in" : 900,
+          "refresh_token" : "rm_YCV33nVeAkOEoBjUoSU3A8ytP2WpnahQ58fob4Xg",
+          "id_token" : "eyJraWQiOiIxNDY0MzQ0NzE1NjgzIiwiYWxnIjoiUlMyNTYifQ.eyJleHAiOjE0NjQzODM1NzcsImF6cCI6ImVudGVycHJpc2VhcGktc2ItVmg3OTVvZFRKc0pWcEJGMHFMbUI0VWxjIiwic3ViIjoiaUVsR1NXVERqeW85RFpmWEp4YkNLdnV2Z2ZkSE5lZGJTRmJieXRTdldpcmowWWZKdzdtb1FtelQ1R3RrR0g2UiIsImF1ZCI6WyJlbnRlcnByaXNlYXBpLXNiLVZoNzk1b2RUSnNKVnBCRjBxTG1CNFVsYyJdLCJpc3MiOiJodHRwczpcL1wvYXBpLXNhbmRib3guY2FwaXRhbG9uZS5jb20iLCJuYmYiOjE0NjQzNzk5NzcsImlhdCI6MTQ2NDM3OTk3N30.XG13KFg-wxLKUWeM7dqwwGE8F2y2iXNxZk8dwyITd4M0eZhkKoJBnAbWjeAsekkmXBxPx61Mb0IQ-a6Q4KLVQI7cyuU76wkJiZoEvl3HARjX4XvKHNMayyZr4XAO9mG9Jrhotg6Vwf4_t4ecL4Q1s0r4IqcS2MZInDJIdv76Q6ANiMRQgxuHSt-uKPi8PryM9NfW1yP56PAWXx_zF3oAPuEEz5g9hC-mspu1OuqesLaLjnEGTd2m4JQf7pOZoP9WB-CqwXITq63jk5-8zSTqjkeUBWcy7lM0s5qvZLDp_QiRlfPJdaJwZA9NXHqHP3M6WOoCaLWAa-WL5GbjSCwqCA"
+        }
+    http_version: 
+  recorded_at: Fri, 27 May 2016 20:13:06 GMT
+recorded_with: VCR 2.9.3

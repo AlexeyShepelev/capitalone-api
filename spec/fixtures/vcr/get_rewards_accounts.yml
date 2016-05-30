@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-sandbox.capitalone.com/rewards/accounts
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - application/json
+      - v=1
+      User-Agent:
+      - Ruby
+      Host:
+      - api-sandbox.capitalone.com
+      Authorization:
+      - Bearer 8a583e4307bad1513b248273a9183bdd0ce90c06
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Accept:
+      - application/json, v=1
+      Cache-Control:
+      - no-cache, no-store, max-age=0, must-revalidate
+      Content-Type:
+      - application/json
+      Date:
+      - Fri, 27 May 2016 20:14:10 GMT
+      Expires:
+      - '0'
+      Server:
+      - Jetty(7.6.10.v20130312)
+      Set-Cookie:
+      - BlueStripe.PVN=48774b0c00047bcb;Path=/
+      - JSESSIONID=02FA45F876AA4828C9C9900863F1913C;Path=/ext-rewards-accounts-web/;Secure;HttpOnly
+      Strict-Transport-Security:
+      - max-age=31536000 ; includeSubDomains
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - DENY
+      X-Version-Served:
+      - '1'
+      X-Xss-Protection:
+      - 1; mode=block
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: ASCII-8BIT
+      string: '{"rewardsAccounts":[{"rewardsAccountReferenceId":"+jaR3Du6APE+x4kQue7NB1Z6IEL1OWtPNoA4jkumi8xA/Rv0eY0VcPYd2Kzm5jNPNcfriz1XC0LlPgonb7VWsw==","accountDisplayName":"Capital
+        One Visa Platinum Miles *4458","rewardsCurrency":"Miles","productAccountType":"Credit
+        Card","creditCardAccount":{"issuer":"Capital One","product":"Visa Platinum","lastFour":"4458","network":"Visa","isBusinessAccount":false}},{"rewardsAccountReferenceId":"+jaR3Du6APE+x4kQue7NBxknnYAP9j84ThkCoDaEC8ih/lmXpZF3yiGGniuFX/6Di2fn4sgM9jG1zJ3kxZkdUQ==","accountDisplayName":"Capital
+        One Visa Platinum Points *6299","rewardsCurrency":"Points","productAccountType":"Credit
+        Card","creditCardAccount":{"issuer":"Capital One","product":"Visa Platinum","lastFour":"6299","network":"Visa","isBusinessAccount":false}},{"rewardsAccountReferenceId":"+jaR3Du6APE+x4kQue7NB9WemMPO70s8mUdjmylIhqXYxjokJ1GgcsoxxpjEV7aPX+TmXSFn6hZY1wC/C6XRSA==","accountDisplayName":"Capital
+        One Visa Signature Cash *3668","rewardsCurrency":"Cash","productAccountType":"Credit
+        Card","creditCardAccount":{"issuer":"Capital One","product":"Visa Signature","lastFour":"3668","network":"Visa","isBusinessAccount":false}}]}'
+    http_version: 
+  recorded_at: Fri, 27 May 2016 20:14:18 GMT
+recorded_with: VCR 2.9.3
