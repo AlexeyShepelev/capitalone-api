@@ -127,7 +127,7 @@ RSpec.describe CapitalOneAPI::Client do
       VCR.use_cassette "get_rewards_account_details" do
         @result =
           @client.get_rewards_account_details(access_token: '8a583e4307bad1513b248273a9183bdd0ce90c06',
-                                              account_id: CGI.escape('+jaR3Du6APE+x4kQue7NB1Z6IEL1OWtPNoA4jkumi8xA/Rv0eY0VcPYd2Kzm5jNPNcfriz1XC0LlPgonb7VWsw=='))
+                                              account_id:   '+jaR3Du6APE+x4kQue7NB1Z6IEL1OWtPNoA4jkumi8xA/Rv0eY0VcPYd2Kzm5jNPNcfriz1XC0LlPgonb7VWsw==')
       end
 
       expect(@result['accountDisplayName']).to eq 'Capital One Visa Platinum Miles *4458'

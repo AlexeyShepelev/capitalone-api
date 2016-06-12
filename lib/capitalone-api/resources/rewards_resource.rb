@@ -25,6 +25,7 @@ module CapitalOneAPI
     # @param [String] access_token
     # @param [String] account_id
     def get_rewards_account_details(access_token:, account_id:)
+      account_id = CGI.escape(account_id)
       uri = URI.parse("#{@server_url}/rewards/accounts/#{account_id}")
 
       req = Net::HTTP::Get.new(uri)
