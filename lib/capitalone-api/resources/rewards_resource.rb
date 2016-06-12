@@ -1,8 +1,9 @@
 module CapitalOneAPI
   module RewardsResource
 
-    def rewards_authorize_url
-      "#{base_authorize_url}%20read_rewards_account_info"
+    # @param [Hash] params
+    def rewards_authorize_url(params = {})
+      "#{base_authorize_url(params)}&scope=openid%20read_rewards_account_info"
     end
 
     # @param [String] access_token

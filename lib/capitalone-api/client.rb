@@ -1,4 +1,5 @@
 require 'multi_json'
+require_relative 'utils'
 require_relative 'resources/rewards_resource'
 
 module CapitalOneAPI
@@ -61,9 +62,12 @@ module CapitalOneAPI
 
     private
 
-    def base_authorize_url
-      "#{server_url}/oauth/auz/authorize?redirect_uri=#{redirect_uri}&client_id=#{client_id}" +
-        "&response_type=code&scope=openid"
+    # @param [Hash] params
+    def base_authorize_url(params = {})
+      url = "#{server_url}/oauth/auz/authorize?redirect_uri=#{redirect_uri}&client_id=#{client_id}" +
+            "&response_type=code"
+      url = CapitalOneAPI::Utils.set_params_to_url(url: url, params: params) if params.any?
+      url
     end
 
   end

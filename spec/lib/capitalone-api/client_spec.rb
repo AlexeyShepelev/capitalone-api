@@ -33,6 +33,21 @@ RSpec.describe CapitalOneAPI::Client do
       )
     end
 
+    it "returns correct authorize url with params" do
+      expect(@client.rewards_authorize_url(a: 1)).to(
+        eq("https://api-sandbox.capitalone.com/oauth/auz/authorize?redirect_uri=" +
+           "https://example.com&client_id=enterpriseapi-sb-Vh795odTJsJVpBF0qLmB4Ulc&" +
+           "response_type=code&state=%7B%22a%22%3A1%7D&scope=openid%20read_rewards_account_info")
+      )
+    end
+
+    it "returns correct params from callback url" do
+      url = "https://example.com?code=hO-dfD8ECe6qwFpRxA1fsl-zkahO3HxjuVaUiQ&" +
+            "state=%7B%22a%22%3A1%7D"
+      params = CapitalOneAPI::Utils.get_params_from_url(url)
+      expect(params).to eq('a' => 1)
+    end
+
     it "gets access tokens" do
       VCR.use_cassette "get_access_tokens" do
         @result = @client.get_access_tokens('hO-dfD8ECe6qwFpRxA1fsl-zkahO3HxjuVaUiQ')
