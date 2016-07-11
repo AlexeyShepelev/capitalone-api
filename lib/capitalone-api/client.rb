@@ -28,10 +28,7 @@ module CapitalOneAPI
         redirect_uri:  @redirect_uri
       }
 
-      uri = URI.parse("#{@server_url}/oauth/oauth20/token")
-      res = Net::HTTP.post_form(uri, params)
-
-      result = MultiJson.load(res.body)
+      result = post_request("#{@server_url}/oauth/oauth20/token", params)
 
       @access_token  = result['access_token']
       @refresh_token = result['refresh_token']
@@ -49,10 +46,7 @@ module CapitalOneAPI
         client_secret: @client_secret
       }
 
-      uri = URI.parse("#{@server_url}/oauth/oauth20/token")
-      res = Net::HTTP.post_form(uri, params)
-
-      result = MultiJson.load(res.body)
+      result = post_request("#{@server_url}/oauth/oauth20/token", params)
 
       @access_token  = result['access_token']
       @refresh_token = result['refresh_token']
@@ -68,6 +62,43 @@ module CapitalOneAPI
             "&response_type=code"
       url = CapitalOneAPI::Utils.set_params_to_url(url: url, params: params) if params.any?
       url
+    end
+
+    # @param [String] url
+    # @param [Hash] params
+    def post_request(url, params)
+      uri = URI.parse(url)
+
+      req = Net::HTTP::Post.new(uri)
+      req.set_form_data(params)
+
+      res =
+        Net::HTTP.start(uri.hostname, uri.port, ssl_options) do |http|
+          http.request(req)
+        end
+
+      MultiJson.load(res.body)
+    end
+
+    # @param [String] url
+    # @param [String] access_token
+    def get_request(url, access_token)
+      uri = URI.parse(url)
+
+      req = Net::HTTP::Get.new(uri)
+      req['Accept'] = ['application/json', 'v=1']
+      req['Authorization'] = ["Bearer #{access_token}"]
+
+      res =
+        Net::HTTP.start(uri.hostname, uri.port, ssl_options) do |http|
+          http.request(req)
+        end
+
+      MultiJson.load(res.body)
+    end
+
+    def ssl_options
+      { use_ssl: true, ssl_version: 'TLSv1_2' }
     end
 
   end

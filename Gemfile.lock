@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    capitalone-api (0.2.1)
+    capitalone-api (0.2.2)
       multi_json (~> 1.11)
 
 GEM
