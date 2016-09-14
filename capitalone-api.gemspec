@@ -6,7 +6,7 @@ require 'capitalone-api/version'
 Gem::Specification.new do |spec|
   spec.name          = 'capitalone-api'
   spec.version       = CapitalOneAPI::VERSION
-  spec.authors       = ['Alexey Shepelev']
+  spec.authors       = ['Alexey Shepelev (RewardExpert)']
   spec.email         = ['al.shepelev@gmail.com']
 
   spec.summary       = %q{Wrapper for CapitalOne API}

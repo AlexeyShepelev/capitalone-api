@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    capitalone-api (0.2.2)
+    capitalone-api (0.3.3)
       multi_json (~> 1.11)
 
 GEM
@@ -11,7 +11,7 @@ GEM
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     diff-lcs (1.2.5)
-    multi_json (1.11.2)
+    multi_json (1.12.1)
     rake (10.4.2)
     rspec (3.3.0)
       rspec-core (~> 3.3.0)
@@ -44,4 +44,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.11.2
+   1.12.5

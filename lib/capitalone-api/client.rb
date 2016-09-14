@@ -1,3 +1,4 @@
+require 'logger'
 require 'multi_json'
 require_relative 'utils'
 require_relative 'resources/rewards_resource'
@@ -15,6 +16,7 @@ module CapitalOneAPI
       @client_secret = client_secret
       @redirect_uri  = redirect_uri
       @server_url    = server_url
+      @logger        = Logger.new("#{Bundler.root}/log/capitalone_api.log")
     end
 
     # @param [String] auth_code
@@ -67,6 +69,8 @@ module CapitalOneAPI
     # @param [String] url
     # @param [Hash] params
     def post_request(url, params)
+      @logger.info("URL:#{url}; params:#{params}")
+
       uri = URI.parse(url)
 
       req = Net::HTTP::Post.new(uri)
@@ -77,12 +81,16 @@ module CapitalOneAPI
           http.request(req)
         end
 
+      @logger.info("URL:#{url}; response:#{res.body}")
+
       MultiJson.load(res.body)
     end
 
     # @param [String] url
     # @param [String] access_token
     def get_request(url, access_token)
+      @logger.info("URL:#{url}; access_token:#{access_token}")
+
       uri = URI.parse(url)
 
       req = Net::HTTP::Get.new(uri)
@@ -93,6 +101,8 @@ module CapitalOneAPI
         Net::HTTP.start(uri.hostname, uri.port, ssl_options) do |http|
           http.request(req)
         end
+
+      @logger.info("URL:#{url}; response:#{res.body}")
 
       MultiJson.load(res.body)
     end
